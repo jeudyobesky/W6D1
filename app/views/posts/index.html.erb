@@ -1,6 +1,19 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<% @posts.each do |post|%>
-  <%= post.title%>
-  <%= post.content%><br>
-<% end %>
+  <div class="container">
+    
+    <div class="row">
+    <% @posts.each do |post|%>
+          <div class="card">
+            <h5 class="card-header"> <%= post.title %> </h5>
+              <div class="card-body">
+                <h5 class="card-title"> <%= post.content %></h5>
+              <%= link_to 'voir le contenu', post_path(post.id), class:"btn btn-primary"%>
+                 </div>
+          </div>
+
+
+
+      <%= post.title%>
+    <% end %>
+    </div>
+
+  </div>

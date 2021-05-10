@@ -1,2 +1,6 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
+<%= @author.full_name%> <br>
+<%= link_to 'lien du profil', author_path(@post.author_id)%><br>
+<%= @post.title%><br>
+<%= @post.content%>

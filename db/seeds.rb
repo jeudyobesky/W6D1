@@ -8,24 +8,27 @@
 
 def destroy_all
   Author.destroy_all
-  p "Author vidée"
+  p "Authors vidé"
   Post.destroy_all
-  p "Post vidée"
+  p "Posts vidé"
 end
 
 def create_authors
   Author.create(first_name: "Obesky", last_name: "Joe")
   Author.create(first_name: "Oussama", last_name: "Yoda")
-  p "2 Auteurs créer"
+  p "Création de 2 Author"
 end
 
 def create_posts
   counter = 0
   5.times do 
-    Post.create(title: "Post#{counter}", content: "countenu #{counter}")
     counter += 1
+    Post.create(title: "Post#{counter}", content: "Content#{counter}", author_id:2)
   end
-  p "5 acticless crées"
+  3.times do
+    Post.create(title: "Post#{counter}", content: "Content#{counter}", author_id:1)
+  end
+  p "Création de 8 Post"
 end
 
 def perform
