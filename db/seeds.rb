@@ -23,10 +23,10 @@ def create_posts
   counter = 0
   5.times do 
     counter += 1
-    Post.create(title: "Post#{counter}", content: "Content#{counter}", author_id:2)
+    Post.create(title: "Post#{counter}", content: "Mauris pharetra eleifend libero eu porttitor. Morbi tristique placerat nisi, vel elementum mauris malesuada vitae. Sed pellentesque imperdiet mi, ut pharetra justo. Aliquam accumsan euismod enim pellentesque iaculis.", author_id:2)
   end
   3.times do
-    Post.create(title: "Post#{counter}", content: "Content#{counter}", author_id:1)
+    Post.create(title: "Post#{counter}", content: "Mauris pharetra eleifend libero eu porttitor. Morbi tristique placerat nisi, vel elementum mauris malesuada vitae. Sed pellentesque imperdiet mi, ut pharetra justo. Aliquam accumsan euismod enim pellentesque iaculis.", author_id:1)
   end
   p "Création de 8 Post"
 end

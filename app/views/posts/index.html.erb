@@ -1,19 +1,30 @@
+   <br>
+  <br>
   <div class="container">
-    
-    <div class="row">
-    <% @posts.each do |post|%>
-          <div class="card">
-            <h5 class="card-header"> <%= post.title %> </h5>
-              <div class="card-body">
-                <h5 class="card-title"> <%= post.content %></h5>
-              <%= link_to 'voir le contenu', post_path(post.id), class:"btn btn-primary"%>
-                 </div>
+  <div class="row"> 
+  <h4 class="h4"> Bienvenue </h4>
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget turpis metus. Integer a felis urna. Nulla sit amet est eu sem condimentum tempor. Pellentesque aliquam vitae lectus vitae tincidunt. Suspendisse volutpat sed odio non lobortis. Mauris ac lacus eget magna molestie porta sit amet sit amet mi. Maecenas in magna porttitor, lobortis enim vel, faucibus leo. Duis non finibus dui. Suspendisse vitae urna non enim volutpat placerat. Aenean est leo, euismod non mollis id, mattis id magna. Sed hendrerit purus sit amet luctus pretium.
+  </p>
+  </div> 
+  <br>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% @posts.each do |post|%>
+        <div class="col">
+             <div class="card">
+                <%= image_tag ("img.jpg"), class:"card-img-top"%>
+                 <div class="card-body">
+                  <h5 class="card-header"> <%= post.title %> </h5>
+                  <p class="card-text"> <%= post.content %> </p>
+                  <%= link_to 'voir le contenu', post_path(post.id), class:"btn btn-primary"%>
+            </div>
           </div>
-
-
-
-      <%= post.title%>
-    <% end %>
+        </div>
+       <% end %>
     </div>
+
+
+
+
+
 
   </div>

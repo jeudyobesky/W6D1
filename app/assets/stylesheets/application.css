@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ #profil_image{
+  width: 2x;
+  height: 2px;
+  }

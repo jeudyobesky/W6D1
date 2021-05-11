@@ -1,6 +1,12 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<% @authors.each do |author|%>
-  <%= author.full_name%>
-  <br>
-<% end %>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <% @authors.each do |author|%>
+      <br>
+      <%= author.full_name%>
+      <%= link_to 'voir le profil', author_path(author.id), class:"btn btn-primary"%>
+      <br>
+    <% end %>
+  </div>
+</div>

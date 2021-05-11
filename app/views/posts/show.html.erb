@@ -1,6 +1,11 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
-<%= @author.full_name%> <br>
-<%= link_to 'lien du profil', author_path(@post.author_id)%><br>
-<%= @post.title%><br>
-<%= @post.content%>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <%= @author.full_name%> <br>
+    <%= link_to 'visiter le profil de notre auteur', author_path(@post.author_id)%><br>
+    <h5 class="h5 mx-auto d-block"><%= @post.title%></h5>
+    <%= @post.content%>
+    <br>
+  </div>
+</div>
